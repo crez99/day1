@@ -61,7 +61,7 @@ public class Account {
         if (amountToBeDeposited > 0) {
             accountBalance = accountBalance + amountToBeDeposited;
         } else {
-            System.err.print("Amount deposited must be greater than zero");
+            System.err.print("Amount deposited must be greater than Zero");
         }
 
     }
