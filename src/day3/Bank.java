@@ -9,14 +9,14 @@ public class Bank {
         Account a2 = new Account();
 
 //            a1.accountName ="Sireej";
-        a1.setAccountName("Sireej");
+        a1.setAccountName("Sireej Pradhan");
 //            a1.accountNumber="987654321";
         a1.setAccountNumber("987654321");
 //            a1.accountBalance = 5000;
         a1.deposit(a1, 4000);
 
 //            a2.accountName = "Aditya";
-        a2.setAccountName("Aditya");
+        a2.setAccountName("Aditya bhasu piya");
 //            a2.accountNumber="123456789";
         a2.setAccountNumber("123456789");
 //            a2.accountBalance = 8000;
