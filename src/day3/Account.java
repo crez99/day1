@@ -35,7 +35,7 @@ public class Account {
 
 
     //behavior
-    public void transferBalance(Account a1, Account a2, double amountToBeTransferred) {
+    public void transferBalance(Account a2, double amountToBeTransferred) {
 
 
         // a1.accountBalance -= amountToBeTransferred;
@@ -43,7 +43,7 @@ public class Account {
 
         //logic to check balance if it is available
         if (amountToBeTransferred <= accountBalance) {
-            a1.accountBalance = a1.accountBalance - amountToBeTransferred;
+            this.accountBalance = this.accountBalance - amountToBeTransferred;
             a2.accountBalance = a2.accountBalance + amountToBeTransferred;
         } else {
             System.err.print("Insufficient balance");
@@ -52,14 +52,14 @@ public class Account {
     }
 
 
-    public void deposit(Account s, double amountToBeDeposited) {
+    public void deposit(double amountToBeDeposited) {
 
         //s.accountBalance += amountToBeDeposited;
 
         //logic to check negative balance deposited
 
         if (amountToBeDeposited > 0) {
-            accountBalance = accountBalance + amountToBeDeposited;
+            this.accountBalance = this.accountBalance + amountToBeDeposited;
         } else {
             System.err.print("Amount deposited must be greater than Zero");
         }
