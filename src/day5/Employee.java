@@ -1,6 +1,7 @@
 package day5;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Employee {
 
@@ -21,38 +22,41 @@ public class Employee {
     public Employee(String firstName, String lastName, int age, double salary, LocalDate hireDate) {
         //purple color on the name defines the value is for String name, Employee class
         this.firstName = firstName;
+        this.lastName = Objects.requireNonNullElse(lastName, "Unknown");
+        this.age = age;
+        this.salary = salary;
+
+        //if(hireDate==null) {
+        //   this.hireDate = LocalDate.now();
+        //}else{
+        //  this.hireDate=hireDate;
+        //}
+
+        this.hireDate = Objects.requireNonNullElse(hireDate, LocalDate.now());
+    }
+
+    public Employee(String firstName, String middleName, String lastName, int age, double salary, LocalDate hireDate) {
+        //purple color on the name defines the value is for String name, Employee class
+        this.firstName = firstName;
+        this.middleName = Objects.requireNonNullElse(middleName, "Unknown");
         this.lastName = lastName;
         this.age = age;
         this.salary = salary;
         this.hireDate = hireDate;
     }
 
-            public Employee(String firstName, String middleName, String lastName, int age, double salary, LocalDate hireDate) {
-                //purple color on the name defines the value is for String name, Employee class
-                this.firstName = firstName;
-                this.middleName=middleName;
-                this.lastName = lastName;
-                this.age = age;
-                this.salary = salary;
-                this.hireDate = hireDate;
-
-            }
-
-            public void raiseSalary(Employee employee,double percentage){
-                employee.salary+=(employee.salary*percentage)/100;
-            }
+    public void raiseSalary( double percentage) {
+        this.salary += (this.salary * percentage) / 100;
+    }
 
 
-
-
-
-    public void displayEmployeeDetail(Employee employee) {
-        System.out.println(employee.firstName);
-        System.out.println(employee.middleName);
-        System.out.println(employee.lastName);
-        System.out.println(employee.age);
-        System.out.println(employee.salary);
-        System.out.println(employee.hireDate);
+    public void displayEmployeeDetail() {
+        System.out.println(this.firstName);
+        System.out.println(this.middleName);
+        System.out.println(this.lastName);
+        System.out.println(this.age);
+        System.out.println(this.salary);
+        System.out.println(this.hireDate.toString()); //changed to null.toString
     }
 
 
