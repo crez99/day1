@@ -10,6 +10,6 @@ public class Inventory {
 
     public static void decreaseCount(){carInAndOut-=1;}     //decrease when the car is sold
 
-    public static int getCount(){return carInAndOut;}       // get the final count of the inventory
+    public static int getCount(){return carInAndOut;}       // get the final count of the inventory after calculations
 
 }

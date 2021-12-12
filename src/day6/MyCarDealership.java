@@ -23,6 +23,9 @@ public class MyCarDealership {
         Inventory.increaseCount();
         Inventory.increaseCount();
         Inventory.decreaseCount();
+        Inventory.increaseCount();
+        Inventory.increaseCount();
+        Inventory.decreaseCount();
 
 
         //count after the calculation of inventory
