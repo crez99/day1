@@ -31,8 +31,8 @@ public class Bank {
 
         //transfer balance a1 to a2
 
-        //a1.setAccountBalance(4000-300);
-        //a2.setAccountBalance(8000+300);
+        //a1.setAccountBalance(4000-2000);
+        //a2.setAccountBalance(3000+2000);
 
         a1.transferBalance(a2, 2000);
 
